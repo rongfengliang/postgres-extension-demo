@@ -4,6 +4,7 @@ Release:        1%{?dist}
 Summary:        this is a postgresql extension nvl function just like oracle
 License:        APACHE
 URL:            https://github.com/rongfengliang/postgres-extension-demo
+Source0:        https://github.com/rongfengliang/pg-extension-rpm-demo/archive/v1.0.zip
 %define _topdir ~/rpmbuild/SOURCES
 %define buildroot %{_topdir}/%{name}‑%{version}
 %description

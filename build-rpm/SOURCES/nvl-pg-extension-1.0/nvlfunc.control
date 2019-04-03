@@ -1,5 +1,0 @@
-# nvlfunc extension
-comment = 'Oracle compatible nvl function'
-default_version = '1.0'
-module_pathname = '$libdir/nvlfunc'
-relocatable = false
