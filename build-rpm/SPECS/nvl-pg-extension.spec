@@ -5,9 +5,6 @@ Summary:        this is a postgresql extension nvl function just like oracle
 License:        APACHE
 URL:            https://github.com/rongfengliang/postgres-extension-demo
 Source:        https://github.com/rongfengliang/pg-extension-rpm-demo/archive/nvl-pg-extension-1.0.zip
-
-%define _topdir        /root/postgres-extension-demo/extension
-
 %description
 this is a postgresql extension nvl function just like oracle
 
@@ -15,5 +12,7 @@ this is a postgresql extension nvl function just like oracle
 %{make_install}
 
 %files
-%{_topdir}/nvlfunc--1.0.sql
-%{_topdir}/nvlfunc.control
+/root/postgres-extension-demo/extension
+/nvlfunc--1.0.sql
+/root/postgres-extension-demo/extension
+/nvlfunc.control
