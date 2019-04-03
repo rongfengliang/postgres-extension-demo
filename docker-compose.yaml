@@ -1,0 +1,19 @@
+version: '3'
+services:
+  postgresql_db:
+    build: ./
+    image: dalongrong/my-ex-zombodb-postgresql-10-centos7
+    ports:
+    - "5432:5432"
+    environment: 
+    - "POSTGRESQL_ADMIN_PASSWORD=dalong"
+  graphql-engine:
+    image: hasura/graphql-engine:v1.0.0-alpha41
+    ports:
+    - "8080:8080"
+    environment:
+    - "POSTGRES_PASSWORD:dalong"
+    command: >
+      /bin/sh -c "
+      graphql-engine --database-url postgres://postgres:dalong@postgresql_db:5432/postgres serve --enable-console;
+      "
